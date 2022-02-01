@@ -2,7 +2,7 @@ import discord
 import random
 import pubg
 
-DISCORD_TOKEN=''
+DISCORD_TOKEN='<place your key here>'
 
 client = discord.Client()
 
