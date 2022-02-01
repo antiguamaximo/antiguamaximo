@@ -19,13 +19,13 @@ async def on_message(message): #extracts the username, message and channel where
 
     if message.author == client.user:
         return
-
-    if message.channel.name == 'bot-testing-channel' or message.channel.name == 'comandos' or message.channel.name =='chat-general': # Gives information extracted from PUBG servers regarding KDR, TOP10, and WINS!
+    # Provides information given the username regarding multiple important details regarding the account.
+    if message.channel.name == 'bot-testing-channel' or message.channel.name == 'comandos' or message.channel.name =='chat-general': 
         if user_message.startswith('!stats'):
             new_message = user_message.split()
             user = new_message[1]
             
-        
+            #test if the given message is properly set following the criteria on the bot description
             if len(new_message) > 2:
                 season = new_message[2]
                 response1 = pubg.get_lifetime(user,season)
@@ -34,8 +34,8 @@ async def on_message(message): #extracts the username, message and channel where
                 response = pubg.get_lifetime(user)
                 await message.channel.send(response)
             
-
-    if message.channel.name == 'bot-testing-channel': # Basic BOT testing information
+    # Basic BOT testing information
+    if message.channel.name == 'bot-testing-channel': 
         if user_message.lower() == 'hello':
             await message.channel.send(f'Hello {username}!')
         elif user_message.lower() == 'bye':
