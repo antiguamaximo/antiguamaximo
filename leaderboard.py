@@ -15,7 +15,7 @@ def leaderboard(filename, stat):
     counter =1
 
     #Crates a numbered leaderboard
-    for n in range(0,5):
+    for n in range(0,len(username):
         ladder += f'''
         {counter}. {username[n]}   -  {info[n]}\n
         ```'''
